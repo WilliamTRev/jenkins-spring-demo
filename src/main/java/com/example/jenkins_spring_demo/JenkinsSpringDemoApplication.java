@@ -17,7 +17,7 @@ public class JenkinsSpringDemoApplication {
 
 	@GetMapping("/")
 	public String hello(){
-		return "Hello from Jenkins Deploy";
+		return "Hello from Jenkins Deploy again";
 	}
 
 }
