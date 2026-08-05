@@ -32,7 +32,6 @@ pipeline {
                 sh "docker network create jenkins-demo-net || true"
                 sh "docker run -d -p 8081:8080 --network jenkins-demo-net --name ${APP_NAME} ${DOCKER_IMAGE}"
 				sh "ls -la ${WORKSPACE}"
-				sh "file ${WORKSPACE}/prometheus.yml"
 				sh "docker run -d --name prometheus --network jenkins-demo-net -p 9090:9090 -v ${WORKSPACE}/prometheus.yml:/etc/prometheus/prometheus.yml prom/prometheus"
 
 				sh "docker run -d --name grafana --network jenkins-demo-net -p 3000:3000 grafana/grafana"
