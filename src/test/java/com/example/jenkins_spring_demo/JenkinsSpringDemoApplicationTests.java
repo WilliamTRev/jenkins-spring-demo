@@ -22,7 +22,7 @@ class JenkinsSpringDemoApplicationTests {
 
 		// Assert
 		assertEquals(
-				"Hello from Jenkins Deploy again one more time after lunch",
+				"Hello from Jenkins Deploy again before EOD",
 				result
 		);
 	}
